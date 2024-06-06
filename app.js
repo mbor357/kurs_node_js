@@ -20,3 +20,5 @@ app.listen(port, (err) => {
 // Podpięcie css
 var path = require('path')
 app.use('/assets', express.static(path.join(__dirname, "./assets")));
+
+app.use('/js', express.static(path.join(__dirname, "./js")));
