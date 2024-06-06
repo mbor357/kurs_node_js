@@ -5,8 +5,10 @@ const app = express();
 app.set("view engine", 'hbs') 
 //gdy uzytkownik wchodzi na stronę 
 app.get('/', function (req, res) { 
- res.render('index') 
-}) 
+    res.render('index', { 
+    pageTitle: "Lekcja01" 
+    }) 
+   }) 
 app.get('/about', function (req, res){ 
  res.send("My site") 
 }) 
