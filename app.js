@@ -5,4 +5,13 @@ const app = express();
 app.get('/', function (req, res) { 
  res.send("Hello World"); 
 }) 
-app.listen(port) 
+ //gdy uzytkownik wchodzi na stronę o nas
+app.get('/about', function (req, res){ 
+ res.send("My site") 
+}) 
+app.listen(port, (err) => { 
+ if (err) { 
+ return console.log("coś poszło nie tak...:", err)
+ } 
+ console.log("serwer działa na porcie", port) 
+})
